@@ -1,0 +1,130 @@
+@media (min-width: 1601px) {
+    #main {
+        max-width: 100% !important;
+    }
+
+    #exterior #exterior_img_list, #operation #operation_img_list {
+        bottom: 100px;
+    }
+
+    /*honda connect*/
+    #img-hd-connect-app {
+        right: 300px;
+    }
+
+    #operation .operation-content--box--item {
+        width: 700px;
+    }
+
+    #safety .safety-content--box--item {
+        left: 235px;
+    }
+
+    #safety .safety-slider--box-2 > img {
+        position: absolute;
+        bottom: 155px;
+        right: 180px;
+        width: 250px;
+        height: 250px;
+    }
+
+    #safety_sub .safety_sub-content--box > img {
+        top: 35px;
+    }
+
+    .safety_sub_note {
+        width: 850px;
+    }
+
+    #safety_sub #safety_sub_img_list, #accessory #accessory_img_list {
+        bottom: 50px;
+        left: 150px;
+    }
+
+    #library_img_preview, #library_img_list {
+        width: 900px;
+    }
+
+    #test-drive-title-1 {
+        padding-top: 115px;
+    }
+
+    .color-text-box-1 {
+        font-size: 32px;
+    }
+
+    /* ------------- Common ----------- */
+    #msg-text-block-1 > p,
+    #exterior-block-1-text-block-1 > p,
+    #interior-block-2-text-block-1 > span,
+    #operation-block-1-text-block-1 > span,
+    #safety-block-2-text-block-1 > span,
+    #accessory-block-1-text-block-1,
+    #text-box--specifications > span,
+    #test-drive-title-1,
+    #operation-block-1-text-block-1,
+    #exterior .exterior-content--box .exterior-content--box--item .exterior-content--box--item--2 > span,
+    #interior .interior-content--box--item .interior-content--box--item--2 > span,
+    #operation .operation-content--box--item .operation-content--box--item--2 > span,
+    #safety .safety-slider--box .safety-content--box--item--2 > span,
+    #safety_sub .safety_sub-content--box .safety_sub-content--box--item .safety_sub-content--box--item--2 > span,
+    #accessory .accessory-content--box .accessory-content--box--item .accessory-content--box--item--2 > span
+    {
+        font-size: var(--font-size-title-section-screen-large);
+    }
+    #msg-text-block-3 > p,
+    #exterior-block-1-text-block-3 > p,
+    #interior-block-2-text-block-3 > span,
+    #operation-block-1-text-block-3 > p,
+    #safety-block-2-text-block-3 > span,
+    #accessory-block-1-text-block-3,
+    #exterior .exterior-content--box .exterior-content--box--item .exterior-content--box--item--4 > span,
+    #operation .operation-content--box--item .operation-content--box--item--4 > span,
+    #safety .safety-slider--box .safety-content--box--item--4 > span,
+    #safety_sub .safety_sub-content--box .safety_sub-content--box--item .safety_sub-content--box--item--4 > span,
+    #accessory .accessory-content--box .accessory-content--box--item .accessory-content--box--item--4 > span,
+    #interior .interior-content--box--item .interior-content--box--item--4 > span
+    {
+        font-size: var(--font-size-content-section-screen-large);
+        line-height: var(--line-height-content-section-screen-large);
+    }
+
+    #exterior-block-2-text-box > span,
+    #interior-block-2-text-box > span,
+    #operation-block-2-text-box > span,
+    #safety-block-2-text-box > span,
+    .exterior-box--right--item span,
+    .interior-box--left--item span,
+    .operation-box--right--item span,
+    .safety-box--left--item span
+    {
+        font-size: var(--font-size-info-section-screen-large);
+    }
+
+    #msg-text-block-2{
+        top: 82px;
+    }
+    .msg-text--box {
+        position: absolute;
+        bottom: 190px;
+    }
+    #msg-text-block-3 > p {
+        width: 535px;
+    }
+
+    @media (max-height: 1079px) {
+        #accessory {
+            background-position: center -20vh;
+        }
+    }
+
+    #accessory .accessory-content--box .accessory-content--box--item{
+        width: 500px;
+        left: 20vw;
+        right: unset;
+    }
+
+    #popupHeadPage .modal-dialog {
+        max-width: 900px;
+    }
+}

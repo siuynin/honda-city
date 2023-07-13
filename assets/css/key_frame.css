@@ -1,0 +1,106 @@
+@-webkit-keyframes updown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@keyframes updown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@keyframes honda-tool {
+    0% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: -130px;
+        width: 120%;
+    }
+}
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes side-to-side {
+    0% {
+        transform: translateX(10px)
+    }
+    100% {
+        transform: translateX(-10px)
+    }
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes animation-up {
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes hover-hdac {
+    100% {
+        background-color: #fff;
+        color: #09145d;
+    }
+}
+
+.block-transition {
+    transition: all 0.5s linear;
+}
+
+.move-animation.right {
+    transform: translateX(200%);
+}
+
+.move-animation.left {
+    transform: translateX(-200%);
+}
+
+@keyframes hover-btn {
+    100% {
+        background-color: #c40000;
+        color: #fff;
+        border-color: #c40000;
+    }
+}

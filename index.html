@@ -1,0 +1,1706 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Honda City</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/common/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap_4.1.3.min.css">
+    <link rel="stylesheet" href="assets/plugin/slick/slick.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive_1441_to_1600.css">
+    <link rel="stylesheet" href="assets/css/responsive_from_1601.css">
+    <link rel="stylesheet" href="assets/css/responsive_under_1440.css">
+    <link rel="stylesheet" href="assets/css/responsive_under_1200.css">
+</head>
+
+<body>
+ 
+<div class="container-fluid" id="main" style="padding: 0">
+    <!--	Menu-->
+    <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="responsive__menu" class="menu-open">
+        </ul>
+        <ul id="navbar__list"></ul>
+    </nav>
+    <div class="header__hbg-button">
+        <div class="header__hbg-button__open">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header__hbg-button__close">
+            <span></span>
+            <span></span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32"
+                 height="32" viewBox="0 0 32 32">
+                <g id="Mask_Group_1319" data-name="Mask Group 1319" transform="translate(-1290 -42)"
+                   clip-path="url(#clip-path)">
+                    <g id="close-circle-outline" transform="translate(1292.667 44.667)">
+                        <path id="Path_171823" data-name="Path 171823"
+                              d="M90.667,77.333A13.333,13.333,0,1,0,77.333,90.667,13.337,13.337,0,0,0,90.667,77.333Z"
+                              transform="translate(-64 -64)" fill="none" stroke="#fff" stroke-miterlimit="10"
+                              stroke-width="1.5"/>
+                        <!-- <path id="Path_171824" data-name="Path 171824"
+                              d="M200.889,200.889,192,192m0,8.889L200.889,192"
+                              transform="translate(-183.111 -183.111)" fill="none" stroke="#fff"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> -->
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="honda-tools">
+        <ul>
+            <li class="open">
+                <!-- <span>open</span> -->
+                <div class="toggle-tools">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#CC0000"
+                         class="bi bi-clipboard2-plus icon" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+                        <path
+                            d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+                        <path
+                            d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
+                    </svg>
+                </div>
+            </li>
+            <li class="close item-mb">
+                <!-- <span>close</span> -->
+                <div class="toggle-tools">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#CC0000"
+                         class="bi bi-clipboard2-x icon" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+                        <path
+                            d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+                        <path
+                            d="M8 8.293 6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293Z"/>
+                    </svg>
+                </div>
+            </li>
+            <li class="item-mb">
+                <a href="https://www.honda.com.vn/o-to/dang-ky-lai-thu" target="_blank">
+                    <img class="icon" src="assets/imgs/common/asset_1.png"/>
+                    <img class="icon-active" src="assets/imgs/common/asset_1.png"/>
+                    <div class="tool-hover">
+                        Đăng ký lái thử
+                    </div>
+                </a>
+            </li>
+            <li class="item-mb">
+                <a href="https://www.honda.com.vn/o-to/dai-ly/danh-sach-dai-ly" target="_blank">
+                    <img class="icon" src="assets/imgs/common/asset_2.png"/>
+                    <img class="icon-active" src="assets/imgs/common/asset_2.png"/>
+                    <div class="tool-hover">
+                        Tìm đại lý
+                    </div>
+                </a>
+            </li>
+            <li class="item-mb">
+                <a href="https://www.honda.com.vn/o-to/du-toan-chi-phi" target="_blank">
+                    <img class="icon" src="assets/imgs/common/asset_3.png"/>
+                    <img class="icon-active" src="assets/imgs/common/asset_3.png"/>
+                    <div class="tool-hover">
+                        Dự toán chi phí
+                    </div>
+                </a>
+            </li>
+            <li class="item-mb">
+                <a target="_blank" href="assets/catalogue/Catalogue_CITY.pdf">
+                    <img class="icon" src="assets/imgs/common/asset_4.png"/>
+                    <img class="icon-active" src="assets/imgs/common/asset_4.png"/>
+                    <div class="tool-hover">
+                        Tải Catalougue
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--THÔNG ĐIỆP-->
+    <section id="message" data-nav="THÔNG ĐIỆP">
+        <div id="msg-block-1">
+            <!--            <div id="msg-block-1-text-1"></div>-->
+            <div id="msg-block-1-text-2"></div>
+            <div id="msg-block-1-text-3"></div>
+            <div id="msg-block-1-text-4"></div>
+
+
+            <img id="msg-block-1--img-small" src="assets/imgs/message/bg_popup.jpg" width="100%" style="display: none"
+                 alt="">
+        </div>
+        <div id="msg-block-2" class="block-animation">
+            <div style="height: 100%; display: grid; grid-template-columns: 1fr 1fr">
+                <div></div>
+                <div class="move-animation block-transition right" style="position:relative;">
+                    <div class="msg-text--box">
+                        <div id="msg-text-block-0">
+                            <p>Thông điệp</p>
+                        </div>
+                        <div id="msg-text-block-1">
+                            <p>KIÊU HÃNH VƯƠN XA</p>
+                        </div>
+                        <div id="msg-text-block-2">
+                            <img src="assets/imgs/common/vector_line.png" width="100%" alt="">
+                        </div>
+                        <div id="msg-text-block-3">
+                            <p>Cuộc sống là hành trình không ngừng bứt phá để chinh phục những tầm cao.
+                                Honda City không ngừng chuyển mình trong đường nét thiết kế, đột phá với công nghệ tiên
+                                tiến để cùng bạn vươn xa đầy kiêu hãnh trên hành trình kiến tạo những thành công mới.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Head Page -->
+    <!-- <div class="modal fade" id="popupHeadPage" tabindex="-1" role="dialog" aria-labelledby="popupHeadPageTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path id="close-sharp"
+                                  d="M128,113.861,126.139,112,120,118.139,113.861,112,112,113.861,118.139,120,112,126.139,113.861,128,120,121.861,126.139,128,128,126.139,121.861,120Z"
+                                  transform="translate(-112 -112)" fill="#fff"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-video1">
+                        <img src="assets/imgs/message/bg_popup.jpg" alt="">
+                        <div class="play-video1">
+                            <img src="assets/imgs/common/play_outline.png" alt="">
+                            <a class="play-button1">
+                                <img src="assets/imgs/common/play_button.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="player1" class="d-none"></div>
+                </div>
+                <div class="modal-footer popup-enter__actions">
+                    <a href="https://www.honda.com.vn/o-to/du-toan-chi-phi" target="_blank"
+                       class="btn">DỰ TOÁN CHI PHÍ</a>
+                    <a href="https://www.honda.com.vn/o-to/dang-ky-lai-thu" target="_blank"
+                       class="btn move-to-test-drive">ĐĂNG KÝ TRẢI NGHIỆM</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--MÀU SẮC-->
+    <section id="color" data-nav="MÀU SẮC">
+        <div id="color-carousel">
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Trắng ngà tinh tế</span>
+                    </div>
+                    <div class="spriteSpin" data-name="white"></div>
+                </div>
+            </div>
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Đỏ cá tính (RS, L)</span>
+                    </div>
+                    <div class="spriteSpin" data-name="red"></div>
+                </div>
+            </div>
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Xám phong cách</span>
+                    </div>
+                    <div class="spriteSpin" data-name="grey"></div>
+                </div>
+            </div>
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Xanh lịch lãm (RS, L)</span>
+                    </div>
+                    <div class="spriteSpin" data-name="blue"></div>
+                </div>
+            </div>
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Titan mạnh mẽ (RS, L)</span>
+                    </div>
+                    <div class="spriteSpin" data-name="titan"></div>
+                </div>
+            </div>
+            <div class="color-carousel-itm">
+                <div class="view360-container">
+                    <div class="color-text-box">
+                        <div class="color-text-box-1--parent">
+                            <span></span>
+                            <span class="color-text-box-1">MÀU SẮC</span>
+                            <span></span>
+                        </div>
+                        <span class="color-text-box-2">Đen ánh độc tôn</span>
+                    </div>
+                    <div class="spriteSpin" data-name="black"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exterior" data-nav="NGOẠI THẤT">
+        <div class="exterior-content--box block-animation">
+            <div class="exterior-content--box--item move-animation block-transition left">
+                <div class="exterior-content--box--item--1">
+                    <span>NGOẠI THẤT</span>
+                </div>
+                <div class="exterior-content--box--item--2">
+                    <span>DIỆN MẠO THỂ THAO ĐẦY CÁ TÍNH</span>
+                </div>
+                <div class="exterior-content--box--item--3">
+                    <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                </div>
+                <div class="exterior-content--box--item--4">
+                    <span>Phong cách thiết kế thể thao đầy mạnh mẽ, cuốn hút là tuyên ngôn cho dấu ấn riêng đậm chất cá tính của chủ sở hữu. Honda City đón đầu mọi xu hướng, kiến tạo diện mạo mới đầy kiêu hãnh để bạn luôn là tâm điểm của mọi ánh nhìn.</span>
+                </div>
+                <a class="btn-view-detail" data-toggle="modal" data-target="#exteriorPopupDetail"
+                   onclick="$('.popup-view-detail--list').slick('refresh');">
+                    <span>Xem Chi Tiết</span>
+                </a>
+            </div>
+        </div>
+        <div class="exterior-slider--box">
+            <div class="exterior-slider--box-1"></div>
+            <div class="exterior-slider--box-2">
+                <div id="exterior_img_list">
+                    <div class="slider-nav-view">
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_1.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_2.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_3.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_4.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_5.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_6.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_7.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_8.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_9.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/exterior/item_10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View detail -->
+        <div class="modal fade popupDetail popupDetail" id="exteriorPopupDetail" tabindex="-1" role="dialog"
+             aria-labelledby="exteriorPopupDetailTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="slider popup-view-detail--list">
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_1.jpg" alt="">
+                                    <span>Mặt trước xe đầy cuốn hút với lưới tản nhiệt tổ ong cùng logo RS dập nổi, kết hợp chi tiết thiết kế cản trước đầy góc cạnh tạo nên diện mạo ấn tượng đậm chất thể thao (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_2.jpg" alt="">
+                                    <span>Thiết kế cụm đèn trước hiện đại cùng điểm nhấn là dải đèn LED chạy ban ngày nổi bật, cuốn hút mọi ánh nhìn (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_3.jpg" alt="">
+                                    <span>Đèn sương mù LED được thiết kế hài hòa với cản trước, góp phần tôn lên dấu ấn thể thao ấn tượng (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_4.jpg" alt="">
+                                    <span>Gương chiếu hậu tích hợp đèn báo rẽ LED hiện đại.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_5.jpg" alt="">
+                                    <span>La-zăng 16" đa chấu với phay cắt đen đậm chất thể thao, tôn lên chất cá tính và thời thượng cho chiếc xe (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_6.jpg" alt="">
+                                    <span>Chi tiết thiết kế líp hông khuếch tán hai bên xe khỏe khoắn và mạnh mẽ, tạo nên diện mạo đầy cuốn hút (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_7.jpg" alt="">
+                                    <span>Ăng-ten vây cá mập tạo nên ấn tượng đầy cá tính.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_8.jpg" alt="">
+                                    <span>Cánh lướt gió là điểm nhấn thể thao đầy kiêu hãnh và mạnh mẽ, giúp chủ sở hữu luôn là tâm điểm khi lướt đi trên phố (RS).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_9.jpg" alt="">
+                                    <span>Đèn hậu LED với đường nét thiết kế tinh xảo và nổi bật.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/exterior/item_10.jpg" alt="">
+                                    <span>Thiết kế cản sau góc cạnh, góp phần tạo nên dấu ấn thể thao ấn tượng.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--NỘI THẤT-->
+    <section id="interior" data-nav="NỘI THẤT">
+        <div class="interior-content--box block-animation">
+            <div class="interior-content--box--item move-animation block-transition left">
+                <div class="interior-content--box--item--1">
+                    <span>NỘI THẤT</span>
+                </div>
+                <div class="interior-content--box--item--2">
+                    <span>KHÔNG GIAN RỘNG RÃI</span>
+                    <br>
+                    <span>THƯ THÁI MỌI HÀNH TRÌNH</span>
+                </div>
+                <div class="interior-content--box--item--3">
+                    <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                </div>
+                <div class="interior-content--box--item--4">
+                    <span>Rộng rãi và tiện nghi cùng các trang bị hiện đại, Honda City đem lại trải <br> nghiệm đầy thư thái cho mọi hành trình.</span>
+                </div>
+                <a class="btn-view-detail" data-toggle="modal" data-target="#interiorPopupDetail"
+                   onclick="$('.popup-view-detail--list').slick('refresh');">
+                    <span>Xem Chi Tiết</span>
+                </a>
+            </div>
+        </div>
+        <div class="interior-slider--box">
+
+            <!-- View detail -->
+            <div class="modal fade popupDetail" id="interiorPopupDetail" tabindex="-1" role="dialog"
+                 aria-labelledby="interiorPopupDetailTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            </button>
+                            <div class="slider popup-view-detail--list">
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_1.jpg" alt="">
+                                        <span>Ghế lái bọc da với viền chỉ đỏ thể thao mang lại ấn tượng thị giác đầy cuốn hút (RS).</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_2.jpg" alt="">
+                                        <span>Thiết kế mặt taplo với đường viền đỏ thể thao tạo nên dấu ấn độc đáo cho khoang lái (RS).</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_3.jpg" alt="">
+                                        <span>Đồng hồ analog kết hợp màn hình màu 4.2 inch hiển thị sắc nét với điểm nhấn thiết kế viền đỏ thể thao (RS),<br> được bố trí thuận tiện với tầm mắt người lái.</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_4.jpg" alt="">
+                                        <span>Vô lăng tích hợp nút điều khiển đa thông tin, âm thanh, đàm thoại rảnh tay và ra lệnh bằng giọng nói.</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_5.jpg" alt="">
+                                        <span>Hệ thống điều hòa tự động 1 vùng (RS, L) tiện nghi với chế độ "Max Cool" làm lạnh nhanh chỉ với một nút bấm.</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_6.jpg" alt="">
+                                        <span>Cửa gió hàng ghế sau đem lại không gian mát mẻ, thư thái cho người đồng hành (RS, L).</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_7.jpg" alt="">
+                                        <span>Hệ thống 8 loa âm thanh cao cấp (RS, L) cho bạn trải nghiệm âm thanh đa chiều chân thật và sống động, giúp cho mọi chuyến đi trọn vẹn cảm hứng cùng các bản nhạc yêu thích.</span>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <div>
+                                        <img data-lazy="./assets/imgs/interior/item_8.jpg" alt="">
+                                        <span>Màn hình cảm ứng 8 inch với độ phân giải cao, cho hình ảnh hiển thị mượt mà và sắc nét. Hệ thống hỗ trợ kết nối với điện thoại thông minh giúp bạn dễ dàng nghe nhạc, nhắn tin, xem bản đồ, nghe gọi,… và tận hưởng hành trình đầy tiện nghi.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="honda_connect">
+        <div class=" s-hda-connect-container">
+            <div class="hda-cn-text-box">
+                <div id="logo_hda_cn"></div>
+                <h3 class="hda-cn-title">Kết Nối Với Xe Của Bạn Bất Kỳ Nơi Đâu<br> Với Honda CONNECT
+                </h3>
+                <p class="hda-cn-text-desc font-averta-semibold">
+                    Khám phá hệ thống Honda CONNECT ưu việt liên kết giữa xe và
+                    điện thoại thông minh bằng sóng di động, đảm bảo mang đến trải
+                    nghiệm tiện nghi, an toàn và an ninh tuyệt đối, đi kèm với tổng
+                    đài hỗ trợ 24/7.
+                </p>
+                <p class="hda-cn-text-desc font-averta-semibold">
+                    *Yêu cầu điện thoại có kết nối mạng Internet
+                </p>
+                <p class="hda-cn-text-desc font-averta-semibold">
+                    ** Chỉ dành cho phiên bản RS
+                </p>
+                <div class="hda-btn-download">
+                    <div class="btn-download-app">
+                        <a target="_blank" href="https://apps.apple.com/vn/app/honda-connect-vietnam/id1576048939">
+                            <div class="btn-area">
+                                <div class="hda-cn-img-download">
+                                    <img class="hda_img_download"
+                                         src="assets/imgs/honda_connect/app_store.png" alt="">
+                                </div>
+                                <div>
+                                    <p>Download on the</p>
+                                    <p>App Store</p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="btn-download-app">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=vn.co.honda.hconnect">
+                            <div class="btn-area">
+                                <div class="hda-cn-img-download">
+                                    <img class="hda_img_download" src="assets/imgs/honda_connect/g_play.png"
+                                         alt="">
+                                </div>
+                                <div>
+                                    <p>GET IT ON</p>
+                                    <p>Google Play</p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <a class="hda-detail" href="https://www.honda.com.vn/o-to/san-pham/honda-connect/index.html" target="_blank">
+                    Xem Chi Tiết
+                </a>
+            </div>
+            <div>
+                <img src="assets/imgs/honda_connect/honda-connect-app.png" id="img-hd-connect-app" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--VẬN HÀNH-->
+    <section id="operation" data-nav="VẬN HÀNH">
+        <div class="operation-content--box"></div>
+        <div class="operation-slider--box">
+            <div class="operation-slider--box-1 block-animation">
+                <div class="operation-content--box--item move-animation block-transition left">
+                    <div class="operation-content--box--item--1">
+                        <span>VẬN HÀNH</span>
+                    </div>
+                    <div class="operation-content--box--item--2">
+                        <span>VẬN HÀNH MẠNH MẼ ĐẦY PHẤN KHÍCH</span>
+                    </div>
+                    <div class="operation-content--box--item--3">
+                        <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                    </div>
+                    <div class="operation-content--box--item--4">
+                        <span>Với động cơ mạnh mẽ và khả năng tăng tốc mượt mà, Honda City mang lại cảm xúc đầy phấn khích mỗi khi cầm lái, để bạn tự tin bứt phá trên mọi cung đường.</span>
+                    </div>
+                    <a class="btn-view-detail" data-toggle="modal" data-target="#operationPopupDetail"
+                       onclick="$('.popup-view-detail--list').slick('refresh');">
+                        <span>Xem Chi Tiết</span>
+                    </a>
+                </div>
+            </div>
+            <div class="operation-slider--box-2">
+                <div id="operation_img_list">
+                    <div class="slider-nav-view">
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_1.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_2.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_3.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_4.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_5.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_6.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/operation/item_7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View detail -->
+        <div class="modal fade popupDetail" id="operationPopupDetail" tabindex="-1" role="dialog"
+             aria-labelledby="operationPopupDetailTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="slider popup-view-detail--list">
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_1.jpg" alt="">
+                                    <span>Hộp số vô cấp CVT giúp chuyển số mượt mà, mang lại cảm giác tăng tốc chân thật cho người lái.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_2.jpg" alt="">
+                                    <span>Động cơ 1.5L i-VTEC DOHC với công suất cực đại 119Hp/6.600rpm và mô men xoắn cực đại 145Nm/4.300rpm cho khả năng tăng tốc nhanh và mạnh mẽ, đồng thời giúp tiết kiệm nhiên liệu tối ưu.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_3.jpg" alt="">
+                                    <span>Hệ thống lái trợ lực điện mang đến phản hồi nhanh nhạy và chính xác, để mỗi chuyển động của vô-lăng đều nhẹ nhàng dù là khi vào cua hay chuyển hướng.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_4.jpg" alt="">
+                                    <span>Lẫy chuyển số trên vô-lăng cho trải nghiệm lái thể thao đầy phấn khích (RS, L).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_5.jpg" alt="">
+                                    <span>Chế độ khởi động bằng nút bấm tiện lợi.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_6.jpg" alt="">
+                                    <span>Chế độ "ECON Mode" giúp tiết kiệm nhiên liệu vượt trội nhờ tối ưu hóa hệ thống làm việc của động cơ, hộp số và điều hòa không khí.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/operation/item_7.jpg" alt="">
+                                    <span>Được thiết kế giúp giảm ma sát ở các chi tiết hệ thống treo, hệ thống khung gầm cải thiện cảm giác cân bằng tay lái và gia tăng độ ổn định của xe. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--AN TOÀN-->
+    <section id="safety" data-nav="AN TOÀN">
+        <div class="safety-content--box">
+        </div>
+        <div class="safety-slider--box">
+            <div class="safety-slider--box-1 block-animation">
+                <div class="safety-content--box--item move-animation block-transition left">
+                    <div class="safety-content--box--item--1">
+                        <span>AN TOÀN</span>
+                    </div>
+                    <div class="safety-content--box--item--2">
+                        <span>AN TOÀN VƯỢT TRỘI</span>
+                    </div>
+                    <div class="safety-content--box--item--3">
+                        <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                    </div>
+                    <div class="safety-content--box--item--4">
+                        <span>Xếp hạng 5 sao cao nhất theo đánh giá của ASEAN NCAP - Tổ chức đánh giá xe mới Đông Nam Á.</span>
+                    </div>
+                    <a class="btn-view-detail" data-toggle="modal" data-target="#safetyPopupDetail"
+                       onclick="$('.popup-view-detail--list').slick('refresh');">
+                        <span>Xem Chi Tiết</span>
+                    </a>
+                </div>
+            </div>
+            <div class="safety-slider--box-2">
+                <img src="assets/imgs/interior/certificate.png" alt="">
+            </div>
+        </div>
+
+        <!-- View detail -->
+        <div class="modal fade popupDetail" id="safetyPopupDetail" tabindex="-1" role="dialog"
+             aria-labelledby="safetyPopupDetailTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="slider popup-view-detail--list">
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_1.jpg" alt="">
+                                    <span>Hệ thống chống bó cứng phanh (ABS) , phân phối lực phanh điện tử (EBD) và hỗ trợ phanh khẩn cấp (BA) giúp xe an toàn trong những tình huống phanh khẩn cấp.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_2.jpg" alt="">
+                                    <span>Hệ thống cân bằng điện tử (VSA) kiểm soát những thay đổi đột ngột, giữ cho xe luôn trong tầm kiểm soát của người lái.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_3.jpg" alt="">
+                                    <span>Hệ thống phanh đĩa 4 bánh tạo lực ma sát giúp các tình huống dừng và phanh trở nên nhanh nhạy, cho mọi hành trình của bạn an toàn tối ưu (RS, L).</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_4.jpg" alt="">
+                                    <span>Chế độ hỗ trợ khởi hành ngang dốc (HSA) giúp người lái an tâm và tự tin trên những cung đường dốc hoặc nhấp nhô.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_5.jpg" alt="">
+                                    <span>Khung xe sử dụng các tấm thép cường lực cao, giúp hấp thụ lực tác động của va chạm, giảm nguy cơ chấn thương.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_6.jpg" alt="">
+                                    <span>Móc ghế an toàn cho trẻ em với dây đai 3 điểm nối được thiết kế chắc chắn cùng đệm mút hấp thụ lực.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/item_7.jpg" alt="">
+                                    <span>Camera lùi 3 góc quay là trợ thủ đắc lực trong các tình huống lùi, dừng và đỗ xe.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="safety_sub">
+        <div class="safety_sub-content--box">
+            <img src="assets/imgs/safety/frame.png" alt="">
+            <div class="safety_sub-content--box--item">
+                <div class="safety_sub-content--box--item--2">
+                    <span>AN TÂM CHINH PHỤC HÀNH TRÌNH</span>
+                </div>
+                <div class="safety_sub-content--box--item--3">
+                    <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                </div>
+                <div class="safety_sub-content--box--item--4">
+                    <span>Hệ thống công nghệ hỗ trợ lái xe an toàn tiên tiến Honda SENSING hỗ trợ và bảo vệ bạn tối đa trong từng khoảnh khắc, để bạn an tâm vững tay lái trên mọi cung đường.</span>
+                </div>
+                <a class="btn-view-detail" data-toggle="modal" data-target="#safety_subPopupDetail"
+                   onclick="$('.popup-view-detail--list').slick('refresh');">
+                    <span>Xem Chi Tiết</span>
+                </a>
+            </div>
+        </div>
+        <div class="safety_sub-slider--box">
+            <div class="safety_sub-slider--box-1">
+                <div id="safety_sub_img_list">
+                    <div class="slider-nav-view">
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_1.jpg"
+                                                               alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_2.jpg"
+                                                               alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_3.jpg"
+                                                               alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_4.jpg"
+                                                               alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_5.jpg"
+                                                               alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="assets/imgs/safety/honda_sensing/item_6.jpg"
+                                                               alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="safety_sub-slider--box-2">
+                <span class="safety_sub_note">*Các tính năng của Honda SENSING chỉ có vai trò hỗ trợ lái xe an toàn trong những điều kiện nhất định và không thể thay thế việc lái xe của người sử dụng. Hãy luôn chú ý quan sát và chủ động lái xe an toàn. Chi tiết về tính năng của Honda SENSING, vui lòng tham khảo trong Hướng dẫn sử dụng xe.</span>
+            </div>
+        </div>
+
+        <!-- View detail -->
+        <div class="modal fade popupDetail" id="safety_subPopupDetail" tabindex="-1" role="dialog"
+             aria-labelledby="safety_subPopupDetailTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="slider popup-view-detail--list">
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_1.jpg" alt="">
+                                    <span>Hệ thống phanh giảm thiểu va chạm (CMBS)<br>
+Cảnh báo người lái khi phát hiện vật cản phía trước. Ngoài ra, trong trường hợp người lái không thể tránh khỏi va chạm, hệ thống sẽ tự động phanh để giảm thiểu thiệt hại.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_2.jpg" alt="">
+                                    <span>Hệ thống thông báo xe phía trước khởi hành (LCDN)<br>
+Phát hiện và thông báo cho người lái trong trường hợp xe phía trước đã bắt đầu di chuyển sau khi dừng đỗ thông qua các cảnh báo bằng hình ảnh và âm thanh. Tính năng này đặc biệt hữu dụng trong các trường hợp dừng đỗ đèn đỏ</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_3.jpg" alt="">
+                                    <span>Hệ thống kiểm soát hành trình thích ứng (ACC)<br>
+Khi được kích hoạt, hệ thống sẽ tự động tăng hoặc giảm tốc để hỗ trợ duy trì khoảng cách với phương tiện phía trước, giúp việc lái xe trở nên thoải mái hơn.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_4.jpg" alt="">
+                                    <span>Hệ thống đèn pha thích ứng tự động (AHB)<br>
+Trong điều kiện lái xe vào ban đêm, hệ thống tự động chuyển đổi giữa đèn chiếu gần và đèn chiếu xa tùy thuộc vào tình trạng giao thông.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_5.jpg" alt="">
+                                    <span>Hệ thống giảm thiểu chệch làn đường (RDM)<br>
+Cảnh báo và hỗ trợ người lái đi đúng làn đường khi hệ thống phát hiện xe di chuyển quá gần hoặc đè lên vạch kẻ phân cách các làn đường.</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/safety/honda_sensing/item_6.jpg" alt="">
+                                    <span>Hệ thống hỗ trợ giữ làn đường (LKAS)<br>
+Hỗ trợ đánh lái để giữ cho xe luôn đi ở giữa làn đường, đồng thời hiển thị cảnh báo trong trường hợp xe đi chệch khỏi làn đường.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PHỤ KIỆN-->
+    <section id="accessory" data-nav="PHỤ KIỆN">
+        <div class="accessory-content--box block-animation">
+            <div class="accessory-content--box--item move-animation block-transition right">
+                <div class="accessory-content--box--item--1">
+                    <span>PHỤ KIỆN</span>
+                </div>
+                <div class="accessory-content--box--item--2">
+                    <span>PHỤ KIỆN TUỲ CHỌN CHÍNH HÃNG</span>
+                </div>
+                <div class="accessory-content--box--item--3">
+                    <img src="assets/imgs/common/vector_line.png" alt="vector line">
+                </div>
+                <div class="accessory-content--box--item--4">
+                    <span>Bạn có thể lựa chọn cho chiếc xe những phụ kiện chính hãng để thêm các tiện ích đầy hữu dụng cho mọi chuyến đi.</span>
+                </div>
+                <a class="btn-view-detail" data-toggle="modal" data-target="#accessoryPopupDetail"
+                   onclick="$('.popup-view-detail--list').slick('refresh');">
+                    <span>Xem Chi Tiết</span>
+                </a>
+            </div>
+        </div>
+        <div class="accessory-slider--box">
+            <div class="accessory-slider--box-1">
+                <div id="accessory_img_list">
+                    <div class="slider-nav-view">
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_1.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_2.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_3.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_4.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_5.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_6.jpg" alt="">
+                        </div>
+                        <div class="slider-nav-view-item"><img data-lazy="./assets/imgs/accessory/item_7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accessory-slider--box-2">
+            </div>
+        </div>
+
+        <!-- View detail -->
+        <div class="modal fade popupDetail" id="accessoryPopupDetail" tabindex="-1" role="dialog"
+             aria-labelledby="accessoryPopupDetailTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="slider popup-view-detail--list">
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_1.jpg" alt="">
+                                    <span>Thảm trải sàn nỉ</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_2.jpg" alt="">
+                                    <span>Thảm trải sàn đa thời tiết</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_3.jpg" alt="">
+                                    <span>Viền che mưa</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_4.jpg" alt="">
+                                    <span>Chắn bùn</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_5.jpg" alt="">
+                                    <span>Bạt trùm xe</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_6.jpg" alt="">
+                                    <span>Trải cốp</span>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div>
+                                    <img data-lazy="./assets/imgs/accessory/item_7.jpg" alt="">
+                                    <span>Nẹp bước chân có đèn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--THÔNG SỐ KỸ THUẬT-->
+    <section id="specifications" data-nav="THÔNG SỐ KỸ THUẬT">
+        <div class="s-specifications__container">
+            <div id="text-box--specifications">
+                <span>THÔNG SỐ KỸ THUẬT</span>
+            </div>
+
+            <div class="container" id="table-head-clone">
+                <table class="table table-hover" style="margin-bottom: 0;">
+                    <thead>
+                    <tr id="s-spec-head-table-1" class="hide">
+                        <th class="s-th-wd">Danh mục</th>
+                        <th class="s-th-wd text-center" width="20%">City G</th>
+                        <th class="s-th-wd text-center" width="20%">City L</th>
+                        <th class="s-th-wd text-center" width="20%">City RS</th>
+                    </tr>
+                    <tr id="s-spec-head-table-2">
+                        <td id="s-specifications-table-head1_v2"> Danh mục</td>
+                        <td id="s-specifications-table-head2_v2" style="width: 50%">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
+                                <path id="Polygon_3" data-name="Polygon 3" d="M7,0l7,8H0Z"
+                                      transform="translate(14 8) rotate(180)" fill="#fff"/>
+                            </svg>
+                            <div class="dropdown">
+                                <a class="s-spec-chose-type-car">City G</a>
+                            </div>
+                            <div style="position: absolute;width: 100%;top:50px;left: 0;background-color: #4d5a5c">
+                                <ul class="s-spec-type-car" style="display: none;">
+                                    <li onclick="reloadSpecTable(1)">City G</li>
+                                    <li onclick="reloadSpecTable(2)">City L</li>
+                                    <li onclick="reloadSpecTable(3)">City RS</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="container" id="s-table-container">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="s-th-wd">Danh mục</th>
+                        <th class="s-th-wd text-center" id="s-table-container-thead-item-1" style="width: 20%">City G</th>
+                        <th class="s-th-wd text-center" id="s-table-container-thead-item-2" style="width: 20%">City L</th>
+                        <th class="s-th-wd text-center" id="s-table-container-thead-item-3" style="width: 20%">City RS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">ĐỘNG CƠ/HỘP SỐ</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Kiểu động cơ</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">1.5L i-VTEC DOHC 4 xi lanh thẳng hàng, 16 van</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hộp số</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Vô cấp CVT</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Dung tích xi lanh (cm<sup>3</sup>)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">1.498</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Công suất cực đại (Hp/rpm)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">119 (89 kW)/6.600</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Mô men xoắn cực đại (Nm/rpm)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">145/4.300</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Dung tích thùng nhiên liệu (lít)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">40</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống nhiên liệu</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Phun xăng điện tử/ PGM-FI</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="s-td-wd-title s-specifications-table-title-td">MỨC TIÊU THỤ NHIÊN LIỆU</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Mức tiêu thụ nhiên liệu chu trình tổ hợp (lít/100km)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">5,6</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Mức tiêu thụ nhiên liệu chu trình đô thị cơ bản (lít/100km)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">7,3</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Mức tiêu thụ nhiên liệu chu trình đô thị phụ (lít/100km)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">4,7</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">KÍCH THƯỚC/TRỌNG LƯỢNG
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Số chỗ ngồi</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">5</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Dài x Rộng x Cao (mm)</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item1">4.580 x 1.748 x 1.467</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item2">4.580 x 1.748 x 1.467</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item3">4.589 x 1.748 x 1.467</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chiều dài cơ sở (mm)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">2.600</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chiều rộng cơ sở (trước/sau) (mm)</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item1">1.495/1.483</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item2">1.495/1.485</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item3">1.495/1.485</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Cỡ lốp</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item1">185/60R15</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item2">185/55R16</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item3">185/55R16</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">La-zăng</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item1">Hợp kim/15 inch</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item2">Hợp kim/16 inch</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item3">Hợp kim/16 inch</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Khoảng sáng gầm xe (mm)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">134</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Bán kính vòng quay tối thiểu (toàn thân) (m)</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">5</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Khối lượng bản thân (kg)</td>
+                        <td class="s-td-wd s-spec-detail-item1">1.117</td>
+                        <td class="s-td-wd s-spec-detail-item2">1.128</td>
+                        <td class="s-td-wd s-spec-detail-item3">1.140</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Khối lượng toàn tải (kg)</td>
+                        <td class="s-td-wd s-spec-detail-item1">1.580</td>
+                        <td class="s-td-wd s-spec-detail-item2">1.580</td>
+                        <td class="s-td-wd s-spec-detail-item3">1.580</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">HỆ THỐNG TREO</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống treo trước</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Kiểu MacPherson</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống treo sau</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Giằng xoắn</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">HỆ THỐNG PHANH</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Phanh trước</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Phanh đĩa</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Phanh sau</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item1">Phanh tang trống</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item2">Phanh đĩa</td>
+                        <td colspan="1" class="s-td-wd s-spec-detail-item3">Phanh đĩa</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">HỆ THỐNG HỖ TRỢ VẬN
+                            HÀNH
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Trợ lực lái điện (EPS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Van bướm ga điều chỉnh bằng điện tử (DBW)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chế độ lái xe tiết kiệm nhiên liệu (ECON Mode)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chức năng hướng dẫn lái xe tiết kiệm nhiên liệu (ECO Coaching)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Lẫy chuyển số tích hợp trên vô lăng</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Khởi động bằng nút bấm</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">NGOẠI THẤT</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Cụm đèn trước</td>
+                        <td class="s-td-wd s-spec-detail-item1"> </td>
+                        <td class="s-td-wd s-spec-detail-item2"> </td>
+                        <td class="s-td-wd s-spec-detail-item3"> </td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Đèn chiếu xa</td>
+                        <td class="s-td-wd s-spec-detail-item1">Halogen</td>
+                        <td class="s-td-wd s-spec-detail-item2">Halogen</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Đèn chiếu gần</td>
+                        <td class="s-td-wd s-spec-detail-item1">Halogen</td>
+                        <td class="s-td-wd s-spec-detail-item2">Halogen</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Đèn chạy ban ngày</td>
+                        <td class="s-td-wd s-spec-detail-item1">LED</td>
+                        <td class="s-td-wd s-spec-detail-item2">LED</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Tự động bật tắt theo cảm biến ánh sáng</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Tự động tắt theo thời gian</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn sương mù</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Không</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn hậu</td>
+                        <td class="s-td-wd s-spec-detail-item1">LED</td>
+                        <td class="s-td-wd s-spec-detail-item2">LED</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn phanh treo cao</td>
+                        <td class="s-td-wd s-spec-detail-item1">LED</td>
+                        <td class="s-td-wd s-spec-detail-item2">LED</td>
+                        <td class="s-td-wd s-spec-detail-item3">LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Gương chiếu hậu</td>
+                        <td class="s-td-wd s-spec-detail-item1">Chỉnh điện, gập điện tích hợp đèn báo rẽ LED</td>
+                        <td class="s-td-wd s-spec-detail-item2">Chỉnh điện, gập điện tích hợp đèn báo rẽ LED</td>
+                        <td class="s-td-wd s-spec-detail-item3">Chỉnh điện, gập điện tích hợp đèn báo rẽ LED</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Cửa kính điện tự động lên xuống 1 chạm chống kẹt</td>
+                        <td class="s-td-wd s-spec-detail-item1">Ghế lái</td>
+                        <td class="s-td-wd s-spec-detail-item2">Ghế lái</td>
+                        <td class="s-td-wd s-spec-detail-item3">Ghế lái</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Ăng ten</td>
+                        <td class="s-td-wd s-spec-detail-item1">Dạng vây cá mập</td>
+                        <td class="s-td-wd s-spec-detail-item2">Dạng vây cá mập</td>
+                        <td class="s-td-wd s-spec-detail-item3">Dạng vây cá mập</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">NỘI THẤT</th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">KHÔNG GIAN</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Bảng đồng hồ trung tâm</td>
+                        <td colspan="3" class="s-td-wd s-td-wd-col-3">Analog - Màn hình màu 4.2 inch</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chất liệu ghế</td>
+                        <td class="s-td-wd s-spec-detail-item1">Nỉ</td>
+                        <td class="s-td-wd s-spec-detail-item2">Da</td>
+                        <td class="s-td-wd s-spec-detail-item3">Da</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Ghế lái chỉnh 6 hướng</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Bệ trung tâm tích hợp khay đựng cốc, ngăn chứa đồ
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Tựa tay hàng ghế sau tích hợp hộc đựng cốc
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Không</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Ngăn đựng tài liệu cho hàng ghế sau
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">TAY LÁI</th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chất liệu</td>
+                        <td class="s-td-wd s-spec-detail-item1">Urethane</td>
+                        <td class="s-td-wd s-spec-detail-item2">Da</td>
+                        <td class="s-td-wd s-spec-detail-item3">Da</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Điều chỉnh 4 hướng</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Tích hợp nút điều chỉnh hệ thống âm thanh
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">TRANG BỊ TIỆN
+                            NGHI
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-specifications-table-title-td" colspan="4">TIỆN NGHI CAO CẤP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chế độ khởi động từ xa</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chìa khóa thông minh</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Tay nắm cửa phía trước đóng/mở bằng cảm biến
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-specifications-table-title-td" colspan="4">KẾT NỐI VÀ GIẢI TRÍ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hỗ trợ Honda CONNECT</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Không</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Màn hình</td>
+                        <td class="s-td-wd s-spec-detail-item1">Cảm ứng 8 inch</td>
+                        <td class="s-td-wd s-spec-detail-item2">Cảm ứng 8 inch</td>
+                        <td class="s-td-wd s-spec-detail-item3">Cảm ứng 8 inch</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Kết nối điện thoại thông minh, cho phép nghe nhạc,
+                            gọi điện, nhắn tin, sử dụng bản đồ, ra lệnh bằng giọng nói
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chế độ đàm thoại rảnh tay</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Kết nối Bluetooth</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Kết nối USB</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đài AM/FM</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống loa</td>
+                        <td class="s-td-wd s-spec-detail-item1">4 Loa</td>
+                        <td class="s-td-wd s-spec-detail-item2">8 Loa</td>
+                        <td class="s-td-wd s-spec-detail-item3">8 Loa</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Nguồn sạc</td>
+                        <td class="s-td-wd s-spec-detail-item1">3</td>
+                        <td class="s-td-wd s-spec-detail-item2">3</td>
+                        <td class="s-td-wd s-spec-detail-item3">5</td>
+                    </tr>
+                    <tr>
+                        <td class="s-th-wd s-specifications-table-title-td" colspan="4">TIỆN NGHI KHÁC
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống điều hòa tự động</td>
+                        <td class="s-td-wd s-spec-detail-item1">Chỉnh cơ</td>
+                        <td class="s-td-wd s-spec-detail-item2">1 Vùng</td>
+                        <td class="s-td-wd s-spec-detail-item3">1 Vùng</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Cừa gió điều hòa cho hàng ghế sau
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn đọc bản đồ cho hàng ghế trước và hàng ghế sau
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn cốp</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Gương trang điểm cho hàng ghế trước</td>
+                        <td class="s-td-wd s-spec-detail-item1">Ghế lái</td>
+                        <td class="s-td-wd s-spec-detail-item2">Ghế lái</td>
+                        <td class="s-td-wd s-spec-detail-item3">Ghế lái + Ghế phụ</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="s-th-wd s-specifications-table-title-td">AN TOÀN</th>
+                    </tr>
+                    <tr>
+                        <td class="s-th-wd s-specifications-table-title-td" colspan="4">CHỦ ĐỘNG</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-specifications-table-title-td" colspan="4">Hệ thống Công nghệ hỗ trợ lái xe an toàn tiên tiến Honda
+                            SENSING
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Phanh giảm thiểu va chạm (CMBS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Đèn pha thích ứng tự động (AHB)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Kiểm soát hành trình thích ứng (ACC)
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Giảm thiểu chệch làn đường (RDM)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Hỗ trợ giữ làn đường (LKAS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title s-td-wd-title-padd-left">Thông báo xe phía trước khởi hành (LCDN)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống cân bằng điện tử (VSA)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống kiểm soát lực kéo (TCS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống chống bó cứng phanh (ABS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hệ thống phân phối lực phanh điện tử (EBD)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hỗ trợ lực phanh khẩn cấp (BA)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Hỗ trợ khởi hành ngang dốc (HSA)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Đèn cảnh báo phanh khẩn cấp (ESS)</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Camera lùi</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chức năng khóa cửa tự động theo tốc độ</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-th-wd s-specifications-table-title-td" colspan="4">BỊ ĐỘNG</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Túi khí cho người lái và ngồi kế bên</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Túi khí bên cho hàng ghế trước</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Túi khí rèm cho tất cả các hàng ghế</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Không</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Nhắc nhở cài dây an toàn</td>
+                        <td class="s-td-wd s-spec-detail-item1">Hàng ghế trước</td>
+                        <td class="s-td-wd s-spec-detail-item2">Hàng ghế trước</td>
+                        <td class="s-td-wd s-spec-detail-item3">Hàng ghế trước</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Khung xe hấp thụ lực và tương thích
+                            va chạm ACE
+                        </td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Móc ghế an toàn cho trẻ em ISO FIX</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-th-wd s-specifications-table-title-td" colspan="4">AN NINH</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chìa khóa được mã hóa chống trộm và hệ thống báo động</td>
+                        <td class="s-td-wd s-spec-detail-item1">Có</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    <tr>
+                        <td class="s-td-wd-title">Chế độ khóa cửa tự động khi chìa khóa ra khỏi vùng cảm biến</td>
+                        <td class="s-td-wd s-spec-detail-item1">Không</td>
+                        <td class="s-td-wd s-spec-detail-item2">Có</td>
+                        <td class="s-td-wd s-spec-detail-item3">Có</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!--THƯ VIỆN-->
+    <section id="library" data-nav="THƯ VIỆN">
+        <div class="library-box--title">
+            <span></span>
+            <span class="library-box--title--text">Thư viện</span>
+            <span></span>
+        </div>
+        <div id="library-box-1">
+            <div class="l-option tab-active" id="l-img-tab"><span>HÌNH ẢNH</span></div>
+            <div class="l-option" id="l-video-tab"><span>VIDEO</span></div>
+        </div>
+        <div id="library_img" class="">
+            <div id="library_img_preview">
+                <div><img data-lazy="./assets/imgs/library/item_1.jpg" alt=""></div>
+                <div><img data-lazy="./assets/imgs/library/item_2.jpg" alt=""></div>
+                <div><img data-lazy="./assets/imgs/library/item_3.jpg" alt=""></div>
+                <div><img data-lazy="./assets/imgs/library/item_4.jpg" alt=""></div>
+            </div>
+            <!--            <div id="library_img_list">-->
+            <!--                <div class="slider-item"><img data-lazy="./assets/imgs/library/bg_1.jpg" alt=""></div>-->
+            <!--                <div class="slider-item"><img data-lazy="./assets/imgs/library/bg_1.jpg" alt=""></div>-->
+            <!--                <div class="slider-item"><img data-lazy="./assets/imgs/library/bg_1.jpg" alt=""></div>-->
+            <!--                <div class="slider-item"><img data-lazy="./assets/imgs/library/bg_1.jpg" alt=""></div>-->
+            <!--            </div>-->
+        </div>
+        <div id="library_video" class="d-none" data-ride="carousel">
+            <div class="slider-vid" id="library_video_preview">
+                <div>
+                    <div id="player2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+ 
+    <div class="loading-process text-center">
+        <div class="loading-process__image">
+            <div class="loading-process__image__mask"></div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="54.688" height="44.463" viewBox="0 0 54.688 44.463">
+                    <g transform="translate(0 0)">
+                        <path d="M942.19,45.789c-1.225,5.564-1.708,8.121-2.7,12.15-.953,3.866-1.693,7.453-2.973,9.193a5.709,5.709,0,0,1-4.207,2.285,26.681,26.681,0,0,1-4.755,0,5.72,5.72,0,0,1-4.209-2.285c-1.278-1.739-2.017-5.327-2.972-9.193-1-4.029-1.479-6.586-2.7-12.15,0,0-1.221.049-1.761.087-.732.054-1.3.118-1.929.2,0,0,.706,11.445,1.024,16.292.333,5.1.921,13.693,1.474,20.181,0,0,1.025.167,2.727.266,1.789.1,2.59.118,2.59.118.738-2.86,1.647-6.825,2.683-8.516a3.548,3.548,0,0,1,2.872-1.625,16.367,16.367,0,0,1,2.578-.17h.011a16.381,16.381,0,0,1,2.577.17,3.551,3.551,0,0,1,2.873,1.625c1.036,1.69,1.948,5.656,2.683,8.516,0,0,.8-.014,2.586-.118,1.7-.1,2.73-.266,2.73-.266.553-6.488,1.14-15.081,1.475-20.181.319-4.847,1.022-16.292,1.022-16.292-.625-.083-1.2-.147-1.928-.2-.542-.038-1.763-.087-1.763-.087"
+                              transform="translate(-902.585 -41.886)" fill="#7f0707"/>
+                        <path d="M958.888,53.082c-.745-7.32-5.63-8.866-9.92-9.585a83.5,83.5,0,0,0-8.463-.769c-2.148-.138-7.222-.206-8.727-.208s-6.579.07-8.73.208a83.445,83.445,0,0,0-8.462.769c-4.291.719-9.175,2.265-9.917,9.585a68.668,68.668,0,0,0-.225,7.4,94.479,94.479,0,0,0,.69,9.939,49.5,49.5,0,0,0,1.575,8.278c1.1,3.18,2.083,4.108,3.244,5.053,2.122,1.731,5.619,2.264,6.362,2.4,3.947.709,11.937.837,15.462.832s11.514-.123,15.461-.832c.744-.135,4.241-.667,6.364-2.4,1.161-.945,2.146-1.873,3.244-5.053a49.637,49.637,0,0,0,1.575-8.278,94.871,94.871,0,0,0,.689-9.939,69.3,69.3,0,0,0-.223-7.4m-2.685,12.3c-.436,5.847-.955,9.355-1.7,11.883a9.838,9.838,0,0,1-2.644,4.771c-1.973,1.784-4.69,2.168-6.283,2.405a112.722,112.722,0,0,1-13.8.69,112.794,112.794,0,0,1-13.8-.69c-1.59-.237-4.307-.621-6.28-2.405a9.822,9.822,0,0,1-2.644-4.771c-.746-2.528-1.266-6.036-1.7-11.883a76.47,76.47,0,0,1,.185-12.306c.584-4.578,2.857-6.882,7.728-7.75a70.36,70.36,0,0,1,8.226-.836c2.323-.158,6.147-.235,8.286-.215,2.137-.02,5.96.057,8.286.215a70.314,70.314,0,0,1,8.225.836c4.871.868,7.143,3.172,7.727,7.75a76.419,76.419,0,0,1,.188,12.306"
+                              transform="translate(-904.434 -42.52)" fill="#7f0707"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <span class="loading-process__text">0%</span>
+    </div>
+    
+</div>
+</body>
+<script src="assets/js/jquery_3.7.0.min.js"></script>
+<script src="assets/js/spriteSpin.min.js"></script>
+<script src="assets/js/bootstrap_4.1.3.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/plugin/slick/slick.min.js"></script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="assets/js/script.js"></script>
+<script !src="">
+    var totalImages = $('img').length;
+    var loadedImages = 0;
+
+    function updatePercentage() {
+        loadedImages++;
+        var percent = (loadedImages / totalImages) * 100;
+
+        $('.loading-process__text').text(percent.toFixed(0) + '%');
+        $('.loading-process__image__mask').css({
+            bottom: percent + '%'
+        });
+
+        if (percent >= 50) {
+            $('.loading-process').fadeOut();
+        }
+    }
+
+    $('img').each(function (index, element) {
+        if (element.complete) {
+            return updatePercentage();
+        }
+
+        $(element).on('load', function () {
+            updatePercentage();
+        });
+
+        $(element).on('error', function () {
+            updatePercentage();
+        });
+    });
+</script>
+ 
+</html>

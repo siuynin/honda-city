@@ -1,0 +1,183 @@
+@media (min-width:1441px) and (max-width:1600px){
+    #main {
+        max-width: 100% !important;
+    }
+
+    /* ------- Option Box ------ */
+    #right-option--box li {
+        margin-bottom: 26px;
+    }
+    #right-option--box li a img {
+        width: 40px;
+        height: 40px;
+    }
+    #right-option--box li a {
+        font-size: 20px;
+        font-weight: 600;
+        /* color: #262626; */
+    }
+
+    /* ------------- Common ----------- */
+    #msg-text-block-1 > p,
+    #exterior-block-1-text-block-1 > p,
+    #interior-block-2-text-block-1 > span,
+    #operation-block-1-text-block-1 > span,
+    #safety-block-2-text-block-1 > span,
+    #accessory-block-1-text-block-1,
+    #text-box--specifications > span,
+    #test-drive-title-1,
+    #operation-block-1-text-block-1
+    {
+        font-size: var(--font-size-title-section-screen-large);
+    }
+    #msg-text-block-3 > p,
+    #exterior-block-1-text-block-3 > p,
+    #interior-block-2-text-block-3 > span,
+    #operation-block-1-text-block-3 > p,
+    #safety-block-2-text-block-3 > span,
+    #accessory-block-1-text-block-3
+    {
+        font-size: var(--font-size-content-section-screen-large);
+        line-height: var(--line-height-content-section-screen-large);
+    }
+
+    #exterior-block-2-text-box > span,
+    #interior-block-2-text-box > span,
+    #operation-block-2-text-box > span,
+    #safety-block-2-text-box > span,
+    .exterior-box--right--item span,
+    .interior-box--left--item span,
+    .operation-box--right--item span,
+    .safety-box--left--item span
+    {
+        font-size: var(--font-size-info-section-screen-large);
+    }
+
+    /* ---- Thông điệp ----- */
+
+    /* ------ Màu sắc ------- */
+    .color-text-box-2:after{
+        top: 90px;
+    }
+
+    /* ------ Ngoại thất ------ */
+    #exterior #exterior_img_list {
+        margin-left: 60px;
+    }
+
+    /* --------- Nội thất ---------- */
+    #interior .interior-content--box .interior-content--box--item {
+        display: block;
+    }
+    #interior .interior-slider--box .interior-content--box--item{
+        display: none;
+    }
+    #interior .interior-slider--box-2{
+        display: none;
+    }
+
+    /* ---------- Vận hành ---------- */
+    #operation #operation_img_list {
+        margin-left: 60px;
+    }
+
+    /* ---------- An Toàn ----------- */
+    #safety-block-2-text-block-1 > span {
+        width: 665px;
+        height: 62px;
+        line-height: 40px;
+    }
+    #safety-block-2-text-block-3 > span {
+        width: 543px;
+    }
+
+    /* --------- Phụ kiện ---------- */
+    #accessory-block-1-text-block-1 {
+        width: 527px;
+    }
+
+    /* --------- Thông số kỹ thuật -------- */
+    #text-box--specifications {
+        width: 333px;
+    }
+    #s-table-container .s-th-wd,
+    #s-table-container .s-td-wd,
+    #s-table-container .s-th-wd-no-bg-color
+    {
+        font-size: 18px;
+    }
+
+    /* --------- Test drive --------- */
+    #test-drive-title-1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    #test-drive-title-2,
+    #test-drive-title-3,
+    #test-drive-title-4
+    {
+        width: 100%;
+        text-align: center;
+        font-size: var(--font-size-content-section-screen-large);
+    }
+    #form-test-drive > p  {
+        font-size: var(--font-size-content-section-screen-large);
+    }
+    #form-test-drive input, #form-test-drive select {
+        height: 52px;
+    }
+    #form-test-drive .form-control {
+        font-size: 20px;
+    }
+    #form-test-drive .custom-select {
+        height: calc(2.25rem + 16px);
+    }
+    #form-test-drive .custom-select .custom-select-trigger {
+        font-size: 20px;
+    }
+    #img-hd-connect-app{
+        right: 180px;
+    }
+
+    #library_img_preview, #library_img_list, #library_video{
+        width: 800px;
+    }
+
+    #safety_sub .safety_sub-content--box > img {
+        width: 260px;
+        top: 35px;
+        left: 35px;
+    }
+
+    #msg-text-block-2{
+        top: 82px;
+        width: 206px;
+    }
+
+    #msg-text-block-3 > p {
+        width: 535px;
+    }
+    @media (max-width:1520px){
+        .msg-text--box{
+            left: 260px;
+        }
+        #msg-text-block-3 > p {
+            width: 450px;
+        }
+    }
+    #msg-block-1 {
+        background-position: center;
+    }
+
+    @media (max-height: 899px) {
+        #accessory {
+            background-position: center -10vh;
+        }
+    }
+
+    #accessory .accessory-content--box .accessory-content--box--item {
+        left: 20vw;
+        right: inherit;
+    }
+}

@@ -1,0 +1,8 @@
+:root {
+    --main-border-radius-popup-header-page: 20px;
+    --font-size-title-section-screen-large: 32px;
+    --font-size-content-section-screen-large: 16px;
+    --font-size-info-section-screen-large: 16px;
+    --line-height-content-section-screen-large: 19.2px;
+    --display-color-icon-rotate: inline-block;
+}
